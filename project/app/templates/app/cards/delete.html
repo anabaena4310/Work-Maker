@@ -1,0 +1,12 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+<h1>タスク削除</h1>
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+    <p>タスク "{{ card.title }}" を本当に削除してもよろしいですか？</p>
+    <button type="submit" class="btn btn-danger">確認</button>
+  </form>
+</div>
+{% endblock %}
